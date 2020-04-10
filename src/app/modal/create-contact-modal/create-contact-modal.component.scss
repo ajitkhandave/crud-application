@@ -1,0 +1,18 @@
+.contact-form-modal-wrapper {
+    .contact-form-body {
+        .contact-form {
+            .action-btn-block {
+                text-align: right;
+
+                .btn {
+                    margin: 0 10px;
+                    text-transform: uppercase;
+
+                    &:disabled {
+                        cursor: not-allowed;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+<div class="delete-modal-wrapper">
+    <div class="modal-body delete-modal-body">
+    <span>Are you sure to delete contact for {{user.firstName}} {{user.lastName}}</span>
+    </div>
+    <div class="modal-footer delete-modal-footer">
+        <div class="action-btn-block">
+            <button class="btn btn-outline-secondary" (click)="cancel()">Cancle</button>
+            <button type="submit" class="btn btn-danger" (click)="deleteContact()">Confirm</button>
+          </div>
+    </div>
+</div>
+  

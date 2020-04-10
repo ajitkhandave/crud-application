@@ -1,0 +1,56 @@
+@import "../../../assets/styles/variable.scss";
+
+ngb-alert {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    z-index: 1;
+}
+.contact-list-wrapper {
+    margin-top: 30px;
+    .action-btn-wrapper {
+        
+        .title {
+            text-transform: uppercase;
+            float: left;
+            color: $primary;
+            font-size: 24px;
+            letter-spacing: -1px;
+        }
+        .btn {
+            float: right;
+        }
+    }
+    .contact-list-table-wrapper {
+        .contact-list-table {
+            text-align: center;
+            box-shadow: 1px 1px 10px 5px $off-white;
+            margin-top: 20px;
+
+            .contact-list-table-header {
+                th {
+                    color: $white;
+                    font-size: $size-14;
+                }               
+            }
+            .contact-list-table-body {
+                td {
+                    font-size: $size-14;
+                    color: $gray;
+                }
+                .edit-delete-icon {
+                    i {
+                        margin: 5px;
+                        cursor: pointer;
+                    }
+                    .fa-edit {
+                        color: $primary;
+                    }
+                    .fa-trash-alt {
+                        color:  $red;
+                    }
+                }
+            }
+        }
+    }
+}

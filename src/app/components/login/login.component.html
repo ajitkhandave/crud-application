@@ -1,0 +1,22 @@
+<ngb-alert type="danger" *ngIf="staticAlert" [dismissible]="true" (close)="closeAlert()">
+    Please enter valid username & password
+</ngb-alert>
+<div class="container">
+    <div class="row justify-content-center align-items-center" style="height:100vh">
+        <div class="col-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="" [formGroup]="loginForm">
+                        <div class="form-group">
+                            <input type="text" class="form-control" formControlName="username" name="username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-control" formControlName="password" name="password" placeholder="Enter password">
+                        </div>
+                        <button type="submit" [disabled]="loginForm.invalid" type="button" id="sendlogin" class="btn btn-primary text-uppercase" (click)="login()">login</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

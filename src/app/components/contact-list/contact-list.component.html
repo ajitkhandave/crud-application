@@ -1,0 +1,31 @@
+<ngb-alert type={{alertType}} *ngIf="staticAlert" [dismissible]="true" (close)="closeAlert()">
+    {{alertMsg}}
+</ngb-alert>
+<div class="container-fluid contact-list-wrapper">
+  <div class="col-12 action-btn-wrapper clearfix">
+    <span class="title">Contact List</span>
+    <button class="btn btn-primary" (click)="addContact()">Add New</button>
+  </div>
+  <div class="col-12 contact-list-table-wrapper">
+    <table class="table contact-list-table">
+      <thead class="contact-list-table-header">
+        <th class="bg-primary">First Name</th>
+        <th class="bg-primary">Last Name</th>
+        <th class="bg-primary">Email</th>
+        <th class="bg-primary">Phone Number</th>
+        <th class="bg-primary">Edit / Delete</th>
+      </thead>
+      <tbody class="contact-list-table-body">
+        <tr *ngFor="let user of constactList">
+          <td>{{user.firstName}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.phoneNumber}}</td>
+          <td class="edit-delete-icon">
+            <i class="fas fa-edit" (click)="editContact(user)"></i>
+            <i class="far fa-trash-alt" (click)="deleteContactFormList(user)"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

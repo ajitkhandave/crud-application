@@ -1,0 +1,36 @@
+<div class="contact-form-modal-wrapper">
+    <div class="modal-header contact-form-modal-header">
+      <div class="modal-title title">
+        <span class="">Contact Detail</span>
+      </div>
+    </div>
+    <div class="modal-body contact-form-body">
+        <form class="contact-form" [formGroup]="contactForm">
+            <div class="form-group required">
+                <label class="contact-form-label">First Name</label>
+                <input type="text" class="form-control contact-form-input" formControlName="firstName" aria-describedby="firstName"
+                  placeholder="Enter first name">
+            </div>
+            <div class="form-group required">
+                <label class="contact-form-label">Last Name</label>
+                <input type="text" class="form-control contact-form-input" formControlName="lastName" aria-describedby="lastName"
+                  placeholder="Enter last name">
+            </div>
+            <div class="form-group required">
+                <label class="contact-form-label">Email</label>
+                <input type="email" class="form-control contact-form-input" formControlName="email" aria-describedby="email"
+                  placeholder="Enter email">
+            </div>
+            <div class="form-group required">
+                <label class="contact-form-label">Phone Number</label>
+                <input type="text" class="form-control contact-form-input" formControlName="phoneNumber" aria-describedby="phoneNumber"
+                  placeholder="Enter phone number">
+            </div>
+            <div class="action-btn-block">
+              <button class="btn btn-outline-secondary" (click)="cancel()">Cancle</button>
+              <button type="submit" class="btn btn-primary" (click)="submitContactDetails()" [disabled]="contactForm.invalid">Submit</button>
+            </div>
+        </form>
+    </div>
+  </div>
+  
